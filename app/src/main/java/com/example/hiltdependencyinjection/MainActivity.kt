@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-       userRepository.saveUser("hamama@gmail.com","1234567", "Call From Activity")
+     //  userRepository.saveUser("hamama@gmail.com","1234567", "Call From Activity")
 
         mainUserRepository.saveNewUser("hamza@gmail.com", "12345678")
 

@@ -14,6 +14,6 @@ class UserApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        userRepository.saveUser("hamama@gmail.com","1234567","Call From Application")
+       // userRepository.saveUser("hamama@gmail.com","1234567","Call From Application")
     }
 }
