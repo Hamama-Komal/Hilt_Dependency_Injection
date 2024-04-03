@@ -13,14 +13,14 @@ import javax.inject.Inject
 class MainFragment : Fragment() {
 
     @Inject
-    lateinit var userRepository: UserRepository
+    lateinit var mainUserRepository: MainUserRepository
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
-        userRepository.saveUser("hamama@gmail.com","1234567"," Call From Fragment")
+        mainUserRepository.saveNewUser("hamama@gmail.com","1234567")
 
 
         // Inflate the layout for this fragment
