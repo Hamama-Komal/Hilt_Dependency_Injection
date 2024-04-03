@@ -1,12 +1,13 @@
 package com.example.hiltdependencyinjection
 
-import android.util.Log
+
 import javax.inject.Inject
 
-class UserRepository @Inject constructor() {
+// Constructor Injection
+class UserRepository @Inject constructor(val loggerService: LoggerService) {
 
     fun saveUser(email: String, password: String, call: String){
 
-        Log.d("TESTING","User Save in DB -$call")
+        loggerService.log("User Save in DB -$call")
     }
 }
