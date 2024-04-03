@@ -8,10 +8,13 @@ import android.view.ViewGroup
 import dagger.hilt.EntryPoint
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
+    @MyQualifier
+    //@Named("firebase")
     @Inject
     lateinit var mainUserRepository: MainUserRepository
 

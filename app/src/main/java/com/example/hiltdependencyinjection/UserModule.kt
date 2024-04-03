@@ -6,28 +6,30 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.components.FragmentComponent
+import javax.inject.Named
 
 @InstallIn(ActivityComponent::class)
 @Module
-abstract class UserModule {
+class UserModule {
 
-    /*    // To Access FirebaseRepository
+    // To Access FirebaseRepository
+    //@Named("firebase")
+    @MyQualifier
     @Provides
-    fun provideMainUserRepository() : MainUserRepository{
+    fun provideFirebaseRepository() : MainUserRepository{
         return FirebaseRepository()
     }
-    */
 
 
-    /* //  SQLRepository
+     //  SQLRepository
+    @Named("sql")
     @Provides
-    fun provideMainUserRepository(sqlRepository: SQLRepository) : MainUserRepository{
+    fun provideSQLRepository(sqlRepository: SQLRepository) : MainUserRepository{
         return sqlRepository
     }
-    */
 
 
-    @Binds
+    /*@Binds
     abstract fun bindMainUserRepository(sqlRepository: SQLRepository): MainUserRepository
-
+*/
 }

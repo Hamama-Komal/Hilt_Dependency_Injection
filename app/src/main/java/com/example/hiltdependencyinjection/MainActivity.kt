@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var userRepository: UserRepository
 
+
+    @Named("sql")
     @Inject
     lateinit var mainUserRepository: MainUserRepository
 
@@ -29,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
      //  userRepository.saveUser("hamama@gmail.com","1234567", "Call From Activity")
 
-        mainUserRepository.saveNewUser("hamza@gmail.com", "12345678")
+       mainUserRepository.saveNewUser("hamza@gmail.com", "12345678")
 
     }
 }
